@@ -1,0 +1,40 @@
+<!DOCTYPE Html>
+<html>
+<head>
+  <title>Checkout</title>
+</head>
+<body>
+
+  <form method="POST" action="/store">
+<% if (username !== "")%>
+<p>Thank you shopping with us, <%= username %></p>
+<% } else {%>
+
+<p>thanks for shopping with us.</p>
+<% } %>
+
+<p>Your order is:</p>
+
+<% if (shoes !== "") {%>
+  <label>Shoes:</label> <%= shoes %>
+<% } %>
+
+<% if (bags !== "") {%>
+  <label>Bags:</label> <%= bags %>
+<% } %>
+
+<% if (pants !== "") {%>
+  <label>Pants:</label> <%= pants %>
+<% } %>
+
+<% if (tshirts !== "") {%>
+  <label>T-Shirts:</label> <%= tshirts %>
+  <% } %>
+
+</form>
+
+<br>
+<a href="/"><button>Continue shopping...</button></a>
+<button>Checkout</button>
+</body>
+</html>
